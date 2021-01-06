@@ -11,5 +11,5 @@ int main()
   printf("Sum of %d and %d is %d\n", a, b, c);
   a = 4;
   c = 6;
-  printf("a = %d and b = %d\n", a, c);
+  printf("a = %d and c = %d\n", a, c);
 }
