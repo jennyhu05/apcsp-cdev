@@ -19,8 +19,8 @@ int main()
   printf("The address of a is %p\n", (void*)&a);
 
   //activity
-  float d = 10;
-  float e = 15;
+  float d = 10.5;
+  float e = 15.5;
 
   float* ptrtod = &d;
   float* ptrtoe = &e;
@@ -34,8 +34,8 @@ int main()
   float f = *ptrtod;
   float g = *ptrtoe;
 
-  *ptrtod = 20;
-  *ptrtoe = 30;
+  *ptrtod = 20.5;
+  *ptrtoe = 30.5;
 
   printf("The new value of d is %f\n", d);
   printf("The new value of e is %f\n", e);
