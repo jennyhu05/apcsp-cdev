@@ -1,15 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-// for testing only - do not change
-void getTestInput(int argc, char* argv[], float* a, int* b)
-{
-  if (argc == 3) {
-    sscanf(argv[1], "%f", a);
-    sscanf(argv[2], "%d", b);
-  }
-}
-
 // add your areaOfCircle function here - it must NOT printf, instead it must
 // return the result to be printed in main
 
@@ -62,7 +53,7 @@ int main(int argc, char* argv[])
     }
     return 1;
 
-  } else if (argc >= 3) {
+  } else if (argc > 3) {
     printf("too many arguments\n");
     return 1;
   }
