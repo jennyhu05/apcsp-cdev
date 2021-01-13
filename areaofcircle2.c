@@ -10,7 +10,6 @@ float areaOfCircle(float radius)
 }
 
 
-
 int main(int argc, char* argv[])
 {
   // first check to see if two args (3 including program name) were entered 
