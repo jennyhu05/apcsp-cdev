@@ -8,6 +8,7 @@ struct Student {
      char firstname[100];
      char lastname[100];
      int age;
+     int id;
 };
 
 void printStudent(struct Student* student)
@@ -16,6 +17,7 @@ void printStudent(struct Student* student)
   printf("First Name: %s\n", student->firstname);
   printf("Last Name: %s\n", student->lastname);
   printf("Age: %d\n", student->age);
+  printf("\nID: %d\n", student->id);
 }
 
 
@@ -41,6 +43,7 @@ int main(int argc, char* argv[])
   char firstInput[100];
   char lastInput[100];
   int ageInput;
+  int idInput;
 
   while (1)
   {
@@ -84,9 +87,18 @@ int main(int argc, char* argv[])
        printf("Not a valid age - try again\n");
       }
 
+      printf("ID:");
+      while (1) 
+      {
+       fgets(input, 256, stdin);
+       if (sscanf(input, "%d", &idInput) == 1) break;
+       printf("Not a valid id number - try again\n");
+      }
+
       strcpy(student[numStudents].firstname, firstInput);
       strcpy(student[numStudents].lastname, lastInput);
       student[numStudents].age = ageInput;
+      student[numStudents].id = idInput;
 
       numStudents++;
     }

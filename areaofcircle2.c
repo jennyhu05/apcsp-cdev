@@ -3,7 +3,6 @@
 
 // add your areaOfCircle function here - it must NOT printf, instead it must
 // return the result to be printed in main
-
 float areaOfCircle(float radius)
 {
       float area = M_PI * radius * radius;
