@@ -22,6 +22,54 @@ char shiftChar(char c, int shift, int direction)
   //   shiftChar('c', 3, 1) : 'f'
   //   shiftChar('S', 2, 0) : 'P'
   //   shiftChar('b', 3, 0) : '8'
+  int index;
+  char shiftC;
+  int newIndex; 
+
+  //number 
+  if (c < 58)
+  {
+      index = c + 4;
+  }
+  //upper case
+  else if (c < 91 && c > 64)
+  {
+      index = c - 39;
+  }
+  //lower case
+  else if (c > 96)
+  {
+       index = c - 97;
+  }
+
+
+  if (direction == 1)
+  {
+      newIndex = index + shift;
+
+      if (newIndex > 61)
+      {
+          newIndex = newIndex - 62;
+      }
+
+      shiftC = CHARS[newIndex];
+     
+      return shiftC;
+  } 
+  else if (direction == 0)
+  {
+      newIndex = index - shift;
+
+      if (newIndex < 0)
+      {
+          newIndex = newIndex + 62;
+      }
+
+      shiftC = CHARS[newIndex];
+
+      return shiftC;
+  }
+
 }
 
 
